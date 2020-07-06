@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>HTML Academy: Девайс</title>
         <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-min.css" />
     </head>
     <body class="page-body">
         <header class="main-header index-page-header container">
@@ -32,28 +32,34 @@
                     </ul>
                 </div>
                 <ul class="header-page-navigation-list">
-                    <li class="header-page-navigation-item">
+                    <li class="header-page-navigation-item header-catalog">
                         <a href="#">Каталог товаров</a>
-                        <ul class="product-navigation-list">
-                            <li class="product-navigation-item">
-                                <a href="#">Виртуальная реальность</a>
-                            </li>
-                            <li class="product-navigation-item">
-                                <a href="#">Моноподы для селфи</a>
-                            </li>
-                            <li class="product-navigation-item">
-                                <a href="#">Экшн-камеры</a>
-                            </li>
-                            <li class="product-navigation-item">
-                                <a href="#">Фитнес-браслеты</a>
-                            </li>
-                            <li class="product-navigation-item">
-                                <a href="#">Умные часы</a>
-                            </li>
-                            <li class="product-navigation-item">
-                                <a href="#">Квадрокоптер</a>
-                            </li>
-                        </ul>
+                        <div class="product-navigation">
+                            <ul class="product-navigation-list">
+                                <li class="product-navigation-item">
+                                    <a href="#">Виртуальная реальность</a>
+                                </li>
+                                <li class="product-navigation-item">
+                                    <a href="catalog.html">Моноподы для селфи</a>
+                                </li>
+                                <li class="product-navigation-item">
+                                    <a href="#">Экшн-камеры</a>
+                                </li>
+                            </ul>
+                            <ul class="product-navigation-list">
+                                <li class="product-navigation-item">
+                                    <a href="#">Фитнес-браслеты</a>
+                                </li>
+                                <li class="product-navigation-item">
+                                    <a href="#">Умные часы</a>
+                                </li>
+                            </ul>
+                            <ul class="product-navigation-list">
+                                <li class="product-navigation-item">
+                                    <a href="#">Квадрокоптер</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header-page-navigation-item">
                         <a href="#">Доставка</a>
@@ -155,7 +161,7 @@
                     </li>
 
                     <li class="product-link">
-                        <a href="#">
+                        <a href="catalog.html">
                             <div class="product-icon"></div>
                             <p class="product-name">
                                 Моноподы <br />
@@ -355,6 +361,7 @@
         </section>
 
         <section class="modal map-modal">
+            <h2 class="visually-hidden">Интерактивная карта</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112374947344!2d37.527429315801285!3d55.68703400453021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1593801547617!5m2!1sru!2sru"
                 class="google-map"
@@ -365,8 +372,7 @@
             <button class="modal-close-button map-close" type="button" aria-label="Закрыть окно"></button>
         </section>
 
-        <script src="js/map-script.js"></script>
-        <script src="js/fb-script.js"></script>
+        <script src="js/script-min.js"></script>
     </body>
 </html>
 
