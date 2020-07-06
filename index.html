@@ -7,34 +7,54 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body class="page-body">
-        <header class="main-header container">
+        <header class="main-header index-page-header container">
             <a class="header-logo">
                 <img src="img/logo.svg" alt="Логотип интернет-магазина Девайс" />
             </a>
-            <nav class="header-user-navigation">
-                <form class="header-form" action="https://echo.htmlacademy.ru" method="post">
-                    <p class="header-search">
-                        <input type="text" placeholder="Поиск по сайту" />
-                    </p>
-                    <button class="search-submit" type="submit">Найти</button>
-                </form>
-                <ul class="header-user-navigation-list">
-                    <li class="header-user-navigation-item">
-                        <a href="#">Войти</a>
-                    </li>
-                    <li class="header-user-navigation-item">
-                        <a href="#">Сравнить</a>
-                    </li>
-                    <li class="header-user-navigation-item">
-                        <a href="#">Корзина</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="header-page-navigation">
-                <p class="header-page-navigation-item">
-                    <a href="#">Каталог товаров</a>
-                </p>
+            <nav class="header-navigation">
+                <div class="header-user-navigation">
+                    <form class="header-form" action="https://echo.htmlacademy.ru" method="post">
+                        <p class="header-search">
+                            <input type="text" placeholder="Поиск по сайту" />
+                        </p>
+                        <button class="search-submit" type="submit">Найти</button>
+                    </form>
+                    <ul class="header-user-navigation-list">
+                        <li class="index-header-user-navigation-item">
+                            <a href="#">Войти</a>
+                        </li>
+                        <li class="index-header-user-navigation-item">
+                            <a href="#">Сравнить</a>
+                        </li>
+                        <li class="index-header-user-navigation-item">
+                            <a href="#">Корзина</a>
+                        </li>
+                    </ul>
+                </div>
                 <ul class="header-page-navigation-list">
+                    <li class="header-page-navigation-item">
+                        <a href="#">Каталог товаров</a>
+                        <ul class="product-navigation-list">
+                            <li class="product-navigation-item">
+                                <a href="#">Виртуальная реальность</a>
+                            </li>
+                            <li class="product-navigation-item">
+                                <a href="#">Моноподы для селфи</a>
+                            </li>
+                            <li class="product-navigation-item">
+                                <a href="#">Экшн-камеры</a>
+                            </li>
+                            <li class="product-navigation-item">
+                                <a href="#">Фитнес-браслеты</a>
+                            </li>
+                            <li class="product-navigation-item">
+                                <a href="#">Умные часы</a>
+                            </li>
+                            <li class="product-navigation-item">
+                                <a href="#">Квадрокоптер</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="header-page-navigation-item">
                         <a href="#">Доставка</a>
                     </li>
@@ -46,28 +66,6 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="product-navigation">
-                <ul class="product-navigation-list">
-                    <li class="product-navigation-item">
-                        <a href="#">Виртуальная реальность</a>
-                    </li>
-                    <li class="product-navigation-item">
-                        <a href="#">Моноподы для селфи</a>
-                    </li>
-                    <li class="product-navigation-item">
-                        <a href="#">Экшн-камеры</a>
-                    </li>
-                    <li class="product-navigation-item">
-                        <a href="#">Фитнес-браслеты</a>
-                    </li>
-                    <li class="product-navigation-item">
-                        <a href="#">Умные часы</a>
-                    </li>
-                    <li class="product-navigation-item">
-                        <a href="#">Квадрокоптер</a>
-                    </li>
-                </ul>
-            </nav>
         </header>
 
         <main>
@@ -75,7 +73,7 @@
                 <h2 class="visually-hidden">Хиты продаж</h2>
                 <div class="hits-slider">
                     <ul class="hits-slides">
-                        <li class="hits-slide-item hits-slide">
+                        <li class="hits-slide-item hits-slide current-hits-slide">
                             <p class="hits-slide-slogan">
                                 Делай селфи, <br />
                                 как Бен Стиллер!
@@ -98,7 +96,7 @@
                                 </tr>
                             </table>
                         </li>
-                        <li class="hits-slide-item hits-slide current-hits-slide">
+                        <li class="hits-slide-item hits-slide">
                             <p class="hits-slide-slogan">
                                 Худеем <br />
                                 правильно!
@@ -135,51 +133,65 @@
                     </ul>
                     <ul class="hits-controller">
                         <li>
-                            <button class="hits-control-button" type="button" aria-label="Первый слайд"></button>
+                            <button class="hits-control-button current-hits-control-button" type="button" aria-label="Первый слайд"></button>
                         </li>
                         <li>
-                            <button class="hits-control-button current-hits-control-button" type="button" aria-label="Второй слайд"></button>
+                            <button class="hits-control-button" type="button" aria-label="Второй слайд"></button>
                         </li>
                         <li>
                             <button class="hits-control-button" type="button" aria-label="Третий слайд"></button>
                         </li>
                     </ul>
                 </div>
-                <div class="slider-header"></div>
             </section>
             <section class="products container">
                 <h2 class="visually-hidden">Популярные товары</h2>
-                <div class="products-list">
-                    <a class="product-link" href="#">
-                        <div class="product-icon"></div>
-                        <p class="product-name">Виртуальная реальность</p>
-                    </a>
+                <ul class="products-list">
+                    <li class="product-link">
+                        <a href="#">
+                            <div class="product-icon"></div>
+                            <p class="product-name">Виртуальная реальность</p>
+                        </a>
+                    </li>
 
-                    <a class="product-link" href="#">
-                        <div class="product-icon"></div>
-                        <p class="product-name">Моноподы для селфи</p>
-                    </a>
+                    <li class="product-link">
+                        <a href="#">
+                            <div class="product-icon"></div>
+                            <p class="product-name">
+                                Моноподы <br />
+                                для селфи
+                            </p>
+                        </a>
+                    </li>
 
-                    <a class="product-link" href="#">
-                        <div class="product-icon"></div>
-                        <p class="product-name">Экшн-камеры</p>
-                    </a>
+                    <li class="product-link">
+                        <a href="#">
+                            <div class="product-icon"></div>
+                            <p class="product-name">Экшн-камеры</p>
+                        </a>
+                    </li>
 
-                    <a class="product-link" href="#">
-                        <div class="product-icon"></div>
-                        <p class="product-name">Фитнес-браслеты</p>
-                    </a>
+                    <li class="product-link">
+                        <a href="#">
+                            <div class="product-icon"></div>
+                            <p class="product-name">Фитнес-браслеты</p>
+                        </a>
+                    </li>
 
-                    <a class="product-link" href="#">
-                        <div class="product-icon"></div>
-                        <p class="product-name">Умные часы</p>
-                    </a>
+                    <li class="product-link">
+                        <a href="#">
+                            <div class="product-icon"></div>
+                            <p class="product-name">Умные часы</p>
+                        </a>
+                    </li>
 
-                    <a class="product-link" href="#">
-                        <div class="product-icon"></div>
-                        <p class="product-name">Квадракоптеры</p>
-                    </a>
-                </div>
+                    <li class="product-link">
+                        <a href="#">
+                            <div class="product-icon"></div>
+                            <p class="product-name">Квадракоптеры</p>
+                        </a>
+                    </li>
+                </ul>
             </section>
             <section class="services">
                 <h2 class="visually-hidden">Услуги</h2>
@@ -263,58 +275,98 @@
         </main>
 
         <footer class="main-footer">
-            <div class="footer container">
+            <nav class="footer container">
                 <div class="footer-user-navigation">
                     <img src="img/footer-logo.svg" width="163" height="35" alt="Логотип магазина DEVICE" />
-                    <nav>
-                        <ul class="footer-user-navigation-list">
-                            <li class="footer-user-navigation-item">
-                                <a href="#">Войти</a>
-                            </li>
-                            <li class="footer-user-navigation-item">
-                                <a href="#">Сравнить</a>
-                            </li>
-                            <li class="footer-user-navigation-item">
-                                <a href="#">Корзина</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <ul class="footer-user-navigation-list">
+                        <li class="footer-user-navigation-item">
+                            <a href="#">Войти</a>
+                        </li>
+                        <li class="footer-user-navigation-item">
+                            <a href="#">Сравнить</a>
+                        </li>
+                        <li class="footer-user-navigation-item">
+                            <a href="#">Корзина</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footer-page-navigation">
                     <address>г. Москва, ул. Строителей, 15</address>
-                    <nav>
-                        <ul class="footer-page-navigation-list">
-                            <li class="footer-page-navigation-item">
-                                <a href="#">Доставка</a>
-                            </li>
-                            <li class="footer-page-navigation-item">
-                                <a href="#">Гарантия</a>
-                            </li>
-                            <li class="footer-page-navigation-item">
-                                <a href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <p>Тел.: <a href="tel:+74954959595"></a>+7(495) 495-95-95</p>
+                    <ul class="footer-page-navigation-list">
+                        <li class="footer-page-navigation-item">
+                            <a href="#">Доставка</a>
+                        </li>
+                        <li class="footer-page-navigation-item">
+                            <a href="#">Гарантия</a>
+                        </li>
+                        <li class="footer-page-navigation-item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <p class="footer-page-navigation-tel">Тел.: <a href="tel:+74954959595">+7(495) 495-95-95</a></p>
                 </div>
                 <div class="footer-socials">
-                    <ul class="social-links">
+                    <ul class="socials-list">
                         <li class="socials-item">
-                            <a class="social-link" href="#" aria-label="Facebook"></a>
+                            <a class="socials-link" href="#" aria-label="Facebook"></a>
                         </li>
                         <li class="socials-item">
-                            <a class="social-link" href="#" aria-label="Instagram"></a>
+                            <a class="socials-link" href="#" aria-label="Instagram"></a>
                         </li>
                         <li class="socials-item">
-                            <a class="social-link" href="#" aria-label="Twitter"></a>
+                            <a class="socials-link" href="#" aria-label="Twitter"></a>
                         </li>
                     </ul>
                     <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт подготовила HTML-Академия">
                         <img src="img/html-academy.svg" width="27" height="34" alt="Логотип HTML-Академии" />
                     </a>
                 </div>
-            </div>
+            </nav>
         </footer>
+
+        <section class="modal modal-feedback">
+            <h2 class="visually-hidden">Форма обратной связи</h2>
+            <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="feedback-fieldset">
+                    <ul class="feedback-form">
+                        <li class="feedback-item">
+                            <label class="feedback-label">
+                                Ваше имя:
+                                <input class="feedback-name feedback-field" type="text" name="name" placeholder="Имя Фамилия" />
+                            </label>
+                        </li>
+                        <li class="feedback-item">
+                            <label class="feedback-label">
+                                Ваш email:
+                                <input class="feedback-email feedback-field" type="email" name="email" placeholder="email@example.com" />
+                            </label>
+                        </li>
+                        <li class="feedback-text">
+                            <label class="feedback-label">
+                                Текст письма:
+                                <textarea class="feedback-textarea feedback-field" placeholder="В свободной форме" name="message"></textarea>
+                            </label>
+                        </li>
+                    </ul>
+                    <button class="button feedback-button" type="submit">Отправить</button>
+                </fieldset>
+                <button class="modal-close-button feedback-close" type="button" aria-label="Закрыть окно"></button>
+            </form>
+        </section>
+
+        <section class="modal map-modal">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112374947344!2d37.527429315801285!3d55.68703400453021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1593801547617!5m2!1sru!2sru"
+                class="google-map"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+            ></iframe>
+            <button class="modal-close-button map-close" type="button" aria-label="Закрыть окно"></button>
+        </section>
+
+        <script src="js/map-script.js"></script>
+        <script src="js/fb-script.js"></script>
     </body>
 </html>
 
