@@ -509,7 +509,7 @@
   }
   
   .header-page-navigation-item:first-of-type:focus-within
-    .product-navigation-list {
+    .product-navigation {
     z-index: 2;
     opacity: 1;
   }
