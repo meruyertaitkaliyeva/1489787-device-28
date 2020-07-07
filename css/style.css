@@ -225,7 +225,7 @@
     padding: 0;
   }
   
-  .header-search input {
+  .search-input {
     width: 356px;
     padding-top: 14px;
     padding-right: 22px;
@@ -243,23 +243,21 @@
     box-sizing: border-box;
   }
   
-  .header-form:hover input {
+  .search-input:hover {
     opacity: 0.6;
   }
   
-  .header-form:focus input,
-  .header-form:active input {
+  .search-input:focus,
+  .search-input:active {
     opacity: 1;
     outline: none;
   }
   
-  .header-form:focus .header-search,
-  .header-form:active .header-search {
+  .header-form:focus-within .header-search {
     border-bottom: 2px solid var(--basic-black);
   }
   
-  .header-form:focus .search-submit,
-  .header-form:active .search-submit {
+  .header-form:focus-within .search-submit {
     opacity: 1;
   }
   
@@ -284,6 +282,7 @@
     padding-bottom: 15px;
     padding-left: 17px;
     border: 2px solid var(--basic-black);
+    border-bottom: none;
   
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 300;
@@ -1094,8 +1093,12 @@
   
   .services {
     position: relative;
-  
-    margin-bottom: 158px;
+
+    width: 100%;
+    margin-bottom: 90px;
+    padding-bottom: 68px;
+
+    background-image: linear-gradient(to top,#E5E5E5 74%,#fff 26%);
   }
   
   .services-slider {
@@ -1253,16 +1256,6 @@
     font-size: 15px;
     line-height: 28px;
     letter-spacing: 0.1em;
-  }
-  
-  .services-place {
-    position: absolute;
-    bottom: -68px;
-  
-    width: 100%;
-    height: 288px;
-    background-color: var(--basic-light-grey);
-    z-index: -1;
   }
   
   .partners {
@@ -1471,11 +1464,134 @@
   .page-path-item a:active {
     opacity: 0.1;
   }
+
+  .catalog-page-main {
+    width: 100%;
+
+    background-image: linear-gradient(to right,#E5E5E5 50%,#fff 50%);
+  }
+
+  .catalog-page-header {
+    width: 100%;
+
+    background-image: linear-gradient(to right,#DCDCDC 50%,#E5E5E5 50%);
+  }
+
+  .catalog-header-bar {
+      display: flex;
+  }
+    
+  .filters-heading {
+    margin: 0;
+    margin-right: 191px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+  
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: #dcdcdc;
+  }
+
+  .sorting {
+    display: flex;
+  
+    padding-top: 25px;
+  
+    padding-bottom: 25px;
+    padding-left: 72px;
+  
+    background-color: var(--basic-light-grey);
+  }
+  
+  .sort-heading {
+    margin: 0;
+    margin-right: 57px;
+  
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  .sort-list,
+  .sort-controls {
+    display: flex;
+    flex-wrap: wrap;
+  
+    margin: 0;
+    padding: 0;
+  
+    list-style: none;
+  }
+  
+  .sort-list {
+    margin-right: 204px;
+  }
+  
+  .sort-item a {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+  
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--basic-black);
+    opacity: 0.3;
+  }
+  
+  .sort-control a {
+    display: block;
+  
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+  
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+  
+  .sort-control:first-of-type a {
+    margin-right: 16px;
+
+    background-image: url("../img/up.svg");
+  }
+  
+  .sort-control:last-of-type a {
+    background-image: url("../img/down.svg");
+  }
+  
+  .current-sort-item a,
+  .current-sort-control a {
+    opacity: 1;
+  }
+  
+  .sort-item a:hover,
+  .sort-item a:focus {
+    opacity: 0.6;
+  }
+  
+  .sort-control a:hover,
+  .sort-control a:focus {
+    opacity: 0.4;
+  }
+  
+  .sort-item a:active,
+  .sort-control a:active {
+    opacity: 1;
+  }
   
   .catalog-page {
     display: flex;
-  
-    width: 100%;
+
+    padding: 0 60px;
   }
   
   .filters {
@@ -1485,26 +1601,11 @@
     background-color: var(--basic-light-grey);
   }
   
-  .filters h2 {
-    margin: 0;
-    padding-top: 25px;
-    padding-right: 193px;
-    padding-bottom: 25px;
-    padding-left: 200px;
-  
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    background-color: #dcdcdc;
-  }
-  
   .filters form {
     margin: 0;
     padding-top: 70px;
     padding-right: 68px;
     padding-bottom: 70px;
-    padding-left: 200px;
   }
   
   .filter-type {
@@ -1721,103 +1822,7 @@
   }
   
   .catalog {
-    margin-bottom: 78px;
-  }
-  
-  .sorting {
-    display: flex;
-  
-    margin-bottom: 70px;
-    padding-top: 25px;
-  
-    padding-bottom: 25px;
-    padding-left: 72px;
-  
-    background-color: var(--basic-light-grey);
-  }
-  
-  .sort-heading {
-    margin: 0;
-    margin-right: 57px;
-  
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-  
-  .sort-list,
-  .sort-controls {
-    display: flex;
-    flex-wrap: wrap;
-  
-    margin: 0;
-    padding: 0;
-  
-    list-style: none;
-  }
-  
-  .sort-list {
-    margin-right: 204px;
-  }
-  
-  .sort-item a {
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-  
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    color: var(--basic-black);
-    opacity: 0.3;
-  }
-  
-  .sort-control {
-    width: 18px;
-    height: 18px;
-  
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.3;
-    cursor: pointer;
-  }
-  
-  .sort-control a {
-    display: block;
-  
-    margin: 0;
-    padding: 0;
-  }
-  
-  .sort-control:first-of-type {
-    margin-right: 16px;
-    background-image: url("../img/up.svg");
-  }
-  
-  .sort-control:last-of-type {
-    background-image: url("../img/down.svg");
-  }
-  
-  .current-sort-item a,
-  .current-sort-control {
-    opacity: 1;
-  }
-  
-  .sort-item a:hover,
-  .sort-item a:focus {
-    opacity: 0.6;
-  }
-  
-  .sort-control:hover,
-  .sort-control:focus {
-    opacity: 0.4;
-  }
-  
-  .sort-item a:active,
-  .sort-control:active {
-    opacity: 1;
+    background-color: var(--basic-white);
   }
   
   .catalog-list {
@@ -1827,6 +1832,7 @@
          column-gap: 40px;
   
     margin: 0;
+    margin-top: 70px;
     margin-left: 70px;
     margin-right: 140px;
     padding: 0;
@@ -1976,6 +1982,7 @@
     margin: 0;
     margin-top: -10px;
     margin-left: 72px;
+    margin-bottom: 78px;
     margin-right: 140px;
     padding: 0;
   
