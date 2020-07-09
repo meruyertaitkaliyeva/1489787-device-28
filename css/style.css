@@ -1810,7 +1810,7 @@
   }
   
   .checkbox-input:checked + .checkbox-label::before {
-    background-image: url("../img/icon_check.svg");
+    background-image: url("../img/check.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
